@@ -1,1 +1,5 @@
-<g-book [book]="book" *ngFor="let book of books$ | async"></g-book>
+<g-book
+  [book]="book"
+  *ngFor="let book of books$ | async"
+  (addToCart)="addToCart($event)"
+></g-book>

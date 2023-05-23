@@ -16,6 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "@growthspace/book": ["libs/book/src/index.ts"],
+      "@growthspace/cart": ["libs/cart/src/index.ts"],
+      "@growthspace/cart-state": ["libs/cart-state/src/index.ts"],
       "@growthspace/feed": ["libs/feed/src/index.ts"]
     }
   },

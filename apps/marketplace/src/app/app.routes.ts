@@ -9,5 +9,9 @@ export const appRoutes: Route[] = [
     {
         path: 'feed',
         loadChildren: () => import('@growthspace/feed').then(m => m.FeedModule)
+    },
+    {
+        path: 'cart',
+        loadChildren: () => import('@growthspace/cart').then(m => m.CartModule)
     }
 ];

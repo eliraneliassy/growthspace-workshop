@@ -1,1 +1,1 @@
-export * from './lib/cart.state';
+export * from './lib/cart.service';

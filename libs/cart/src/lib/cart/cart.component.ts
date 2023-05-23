@@ -1,4 +1,4 @@
-import { CartState } from '@growthspace/cart-state';
+import { CartService } from '@growthspace/cart-state';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Book } from '@growthspace/book';
 import { Observable } from 'rxjs';
@@ -12,5 +12,5 @@ import { Observable } from 'rxjs';
 export class CartComponent {
 
   cart$: Observable<Book[]> = this.cartState.getCart();
-  constructor(private cartState: CartState) { }
+  constructor(private cartState: CartService) { }
 }

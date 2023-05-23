@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { CartState } from '@growthspace/cart-state';
+import { CartService } from '@growthspace/cart-state';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -9,9 +9,9 @@ import { Observable } from 'rxjs';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent {
-  numOfItemsInCart$: Observable<number> = this.cartState.numOfItemsInCart();
+  numOfItemsInCart$: Observable<number> = this.cartState.numberOfITemInCart();
 
-  constructor(private cartState: CartState) {
+  constructor(private cartState: CartService) {
 
   }
 }

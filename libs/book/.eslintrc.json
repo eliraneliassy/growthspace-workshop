@@ -9,7 +9,7 @@
           "error",
           {
             "type": "attribute",
-            "prefix": "growthspaceWorkshop",
+            "prefix": "g",
             "style": "camelCase"
           }
         ],
@@ -17,7 +17,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "growthspace-workshop",
+            "prefix": "g",
             "style": "kebab-case"
           }
         ]

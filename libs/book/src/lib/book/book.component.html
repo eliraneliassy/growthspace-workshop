@@ -1,0 +1,17 @@
+<div class="book" *ngIf="book">
+    <div class="title">
+        {{book.title}}
+    </div>
+
+    <div class="description">
+        {{book.description}}
+    </div>
+
+    <div class="price">
+        Price: {{book.price}}
+    </div>
+
+    <img [src]="book.imageLink">
+
+    <button (click)="addToCartHandler()">Add To Cart</button>
+</div>

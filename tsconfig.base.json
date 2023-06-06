@@ -18,7 +18,8 @@
       "@growthspace/book": ["libs/book/src/index.ts"],
       "@growthspace/cart": ["libs/cart/src/index.ts"],
       "@growthspace/cart-state": ["libs/cart-state/src/index.ts"],
-      "@growthspace/feed": ["libs/feed/src/index.ts"]
+      "@growthspace/feed": ["libs/feed/src/index.ts"],
+      "@growthspace/ui": ["libs/ui-components/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

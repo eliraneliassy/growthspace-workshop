@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, NgModule, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Book } from '../book.interface';
+import {ButtonModule} from "@growthspace/ui";
 
 @Component({
   selector: 'g-book',
@@ -19,7 +20,7 @@ export class BookComponent {
 }
 
 @NgModule({
-  imports: [CommonModule],
+  imports: [CommonModule, ButtonModule],
   declarations: [BookComponent],
   exports: [BookComponent],
 })

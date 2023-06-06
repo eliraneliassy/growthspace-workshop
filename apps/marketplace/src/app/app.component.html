@@ -2,4 +2,10 @@
 <!--<marketplace-header></marketplace-header>-->
 <!--<router-outlet></router-outlet>-->
 
-<g-slider [images]="images"></g-slider>
+<g-slider [images]="names" [tempalte]="myTemplate"></g-slider>
+
+<ng-template #myTemplate let-name let-nav="navigate" let-data="data">
+  Hello {{data}}
+  <button (click)="nav.next()">NEXT +</button>
+
+</ng-template>

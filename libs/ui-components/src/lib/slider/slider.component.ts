@@ -1,4 +1,4 @@
-import {AfterViewInit, ChangeDetectionStrategy, Component, Inject, Input, NgModule} from '@angular/core';
+import {AfterViewInit, ChangeDetectionStrategy, Component, Inject, Input, NgModule, TemplateRef} from '@angular/core';
 import {CommonModule, DOCUMENT} from '@angular/common';
 import {ButtonModule} from "../button/button.component";
 
@@ -10,8 +10,14 @@ import {ButtonModule} from "../button/button.component";
 })
 export class SliderComponent implements AfterViewInit{
   @Input({required: true}) images: string[] = [];
+  @Input() tempalte?: TemplateRef<any>;
   currentPosition = 0;
   slidesPositions: number[] = [];
+
+  navigate = {
+    next: () => this.slide(1),
+    prev: () => this.slide(-1)
+  };
 
   constructor(@Inject(DOCUMENT) private document: Document) {
   }

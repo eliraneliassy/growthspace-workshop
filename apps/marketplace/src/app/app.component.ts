@@ -18,6 +18,8 @@ export class AppComponent {
     `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR71YwljqRsN5pyIfLyFnnbvpMbq875uwENYQ&usqp=CAU`
   ]
 
+  names = ['Eliran', 'Maor', 'Shlomo', 'Nativ', 'Shai'];
+
   constructor() {
 
     console.log(1);

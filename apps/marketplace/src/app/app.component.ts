@@ -2,15 +2,25 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import {asyncScheduler, observeOn, of} from "rxjs";
 import {AsyncScheduler} from "rxjs/internal/scheduler/AsyncScheduler";
 import {AsapScheduler} from "rxjs/internal/scheduler/AsapScheduler";
+import {HeaderComponent} from "./header/header.component";
+import {RouterOutlet} from "@angular/router";
+import {FormControl, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
+import {InputComponent} from "@growthspace/ui";
 
 
 @Component({
   selector: 'marketplace-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  // changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
+  imports: [HeaderComponent, RouterOutlet, InputComponent, ReactiveFormsModule]
 })
 export class AppComponent {
+
+  form: FormGroup = new FormGroup({
+    name: new FormControl('', {validators: [Validators.required]})
+  })
 
   images = [
     `https://149369349.v2.pressablecdn.com/wp-content/uploads/2022/08/midjourneygirl-1024x585.png`,
@@ -21,6 +31,8 @@ export class AppComponent {
   names = ['Eliran', 'Maor', 'Shlomo', 'Nativ', 'Shai'];
 
   constructor() {
+
+    this.form.valueChanges.subscribe(console.log)
 
     console.log(1);
     Promise.resolve(2).then(console.log)

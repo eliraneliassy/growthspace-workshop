@@ -8,10 +8,10 @@ export const appRoutes: Route[] = [
     },
     {
         path: 'feed',
-        loadChildren: () => import('@growthspace/feed').then(m => m.FeedModule)
+        loadComponent: () => import('@growthspace/feed').then(m => m.FeedComponent)
     },
     {
         path: 'cart',
-        loadChildren: () => import('@growthspace/cart').then(m => m.CartModule)
+      loadComponent: () => import('@growthspace/cart').then(m => m.CartComponent)
     }
 ];

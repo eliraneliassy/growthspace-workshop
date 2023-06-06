@@ -1,9 +1,22 @@
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { AppModule } from './app/app.module';
-import { akitaDevtools } from '@datorama/akita';
 
-platformBrowserDynamic()
-  .bootstrapModule(AppModule)
+import { akitaDevtools } from '@datorama/akita';
+import {bootstrapApplication} from "@angular/platform-browser";
+import {AppComponent} from "./app/app.component";
+import {provideRouter} from "@angular/router";
+import {appRoutes} from "./app/app.routes";
+import {provideHttpClient} from "@angular/common/http";
+
+// platformBrowserDynamic()
+
+  // .bootstrapModule(AppModule)
+
+bootstrapApplication(AppComponent, {
+  providers: [
+    provideRouter(appRoutes),
+    provideHttpClient()
+  ]
+})
   .catch((err) => console.error(err));
 
 

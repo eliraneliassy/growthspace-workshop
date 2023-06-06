@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true
 })
 export class ButtonComponent {
   @Input() text = '';
@@ -15,10 +16,3 @@ export class ButtonComponent {
     this.clicked.emit();
   }
 }
-
-@NgModule({
-  imports: [CommonModule],
-  declarations: [ButtonComponent],
-  exports: [ButtonComponent],
-})
-export class ButtonModule {}

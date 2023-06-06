@@ -1,0 +1,8 @@
+<input #input
+       (input)="onChange($any($event.target).value)"
+       (blur)="onTouched($event)"
+       [disabled]="disabled">
+
+<small style="color: red" *ngIf="!controlDir.control?.valid">
+  Invalid input
+</small>
